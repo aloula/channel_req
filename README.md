@@ -4,16 +4,23 @@ Basic routine to make parallel HTTP requests using Go channels
 
 Builds for Linux, RPI and Windows can be found at **builds**
 
-#### Usage
+#### Usage:
 
-> `$ ./channel_req <url> <parallel requests> <print response>`
+`$ ./channel_req <url> <parallel requests> <print response>`
 
 #### Examples:
 
-+ Make 1 request printing the response:
+ Make 1 request printing the response:
 
-> `$ ./channel_req https://www.google.com 1 1`
+`$ ./channel_req https://www.google.com 1 1`
 
-+ Make 100 parallel requests without print the response:
+Make 10 parallel requests without print the response:
 
-> `$ ./channel_req https://www.google.com 100 0`
+`$ ./channel_req https://www.google.com 10 0`
+```
+Response Time: 231ms | Status Code: 200
+Response Time: 230ms | Status Code: 200
+Response Time: 248ms | Status Code: 200
+...
+```
+
