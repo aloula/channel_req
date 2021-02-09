@@ -24,3 +24,5 @@ Response Time: 248ms | Status Code: 200
 ...
 ```
 
+Nice article: <https://kofo.dev/understanding-golang-channels>
+
