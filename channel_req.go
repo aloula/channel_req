@@ -51,12 +51,12 @@ func main() {
 	url := os.Args[1]
 	tries, err := strconv.Atoi(os.Args[2])
 	if err != nil {
-		fmt.Println("Type the number of parralel requests")
+		fmt.Println("Type the number of parallel requests")
 		os.Exit(1)
 	}
 	printResponse, err := strconv.Atoi(os.Args[3])
 	if err != nil {
-		fmt.Println("Type 1 for print the response")
+		fmt.Println("Type '1' if you want to print the response")
 		os.Exit(1)
 	}
 
@@ -66,7 +66,7 @@ func main() {
 	}
 
 	for i := 1; i <= tries; i++ {
-		fmt.Println(<-ch)
+		fmt.Println("#", i, "->", <-ch)
 	}
 	os.Exit(0)
 }

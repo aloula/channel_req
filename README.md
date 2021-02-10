@@ -10,19 +10,20 @@ Builds for Linux, RPI and Windows can be found at **builds**
 
 #### Examples:
 
- Make 1 request printing the response:
+Make 1 request printing the response:
 
 `$ ./channel_req https://www.google.com 1 1`
+```
+Response: <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage"...
+# 1 -> Response Time: 261ms | Status Code: 200
+```
 
 Make 10 parallel requests without print the response:
 
-`$ ./channel_req https://www.google.com 10 0`
+`$ ./channel_req https://www.google.com 3 0`
 ```
-Response Time: 231ms | Status Code: 200
-Response Time: 230ms | Status Code: 200
-Response Time: 248ms | Status Code: 200
-...
+# 1 -> Response Time: 253ms | Status Code: 200
+# 2 -> Response Time: 256ms | Status Code: 200
+# 3 -> Response Time: 259ms | Status Code: 200
 ```
-
-Nice article: <https://kofo.dev/understanding-golang-channels>
 
