@@ -20,10 +20,11 @@ Response: <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage"
 
 Make 10 parallel requests without print the response:
 
-`$ ./channel_req https://www.google.com 3 0`
+`$ ./channel_req https://www.google.com 10 0`
 ```
 # 1 -> Response Time: 253ms | Status Code: 200
 # 2 -> Response Time: 256ms | Status Code: 200
 # 3 -> Response Time: 259ms | Status Code: 200
+...
 ```
 
